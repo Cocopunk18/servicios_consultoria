@@ -3,7 +3,7 @@ const serviciosconsul_schema = mongoose.Schema ({
     nit: {type: String, required: true, unique: true},
     nombre: {type:String, required:true},
     servicios: {type: Array, required:true},
-    precio: {type: parseFloat, required:true},
+    precio: {type: Number, required:true},
     encargado: {type: String, required:true},
     fecha_auditoria: {type: Date, required:true},
     resultado_auditoria: {type: Object, required:true,
