@@ -1,12 +1,12 @@
 ###
-POST http://localhost:5000/api/v1/serviciosconsu HTTP/1.1
+POST http://localhost:5000/api/v1/serviciosconsul HTTP/1.1
 Content-Type: application/json
 
 {
-    "nit":"1111111",
-    "nombre":"Minoco",
-    "servcios":["ESTUDIOS DE MERCADO", "APOYO A GESTIONES COMERCIALES"],
-    "precio": "2.000.000",
+    "nit":"1111113",
+    "nombre":"Mi poli",
+    "servicios":["ESTUDIOS DE MERCADO","ASESORAMIENTO LEGAL"],
+    "precio":1000000,
     "encargado":"Viviana Restrepo",
     "fecha_auditoria":"9/03/2023",
     "resultado_auditoria":{
@@ -16,3 +16,34 @@ Content-Type: application/json
         "opnion_denegada":"prueba4"
     }
 }
+
+###
+GET http://localhost:5000/api/v1/serviciosconsul HTTP/1.1
+
+###
+GET http://localhost:5000/api/v1/serviciosconsul/640bc232a4cd3a058a968589 HTTP/1.1
+
+###
+PUT http://localhost:5000/api/v1/serviciosconsul/640bc232a4cd3a058a968589 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nit":"1111113",
+    "nombre":"Mi poli",
+    "servicios":["ESTUDIOS DE MERCADO"],
+    "precio":1000000,
+    "encargado":"Viviana Restrepo",
+    "fecha_auditoria":"9/03/2023",
+    "resultado_auditoria":{
+        "opinion_limpia":"prueba5",
+        "opinion_salvedades": "prueba2",
+        "opnion_adversa":"prueba3",
+        "opnion_denegada":"prueba4"
+    }
+}
+
+###
+DELETE http://localhost:5000/api/v1/serviciosconsul/640bc232a4cd3a058a968589 HTTP/1.1
+
+###
+DELETE http://localhost:5000/api/v1/serviciosconsul HTTP/1.1
