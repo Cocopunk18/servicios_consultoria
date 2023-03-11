@@ -8,7 +8,7 @@ Content-Type: application/json
     "servicios":["ESTUDIOS DE MERCADO","ASESORAMIENTO LEGAL"],
     "precio":1000000,
     "encargado":"Viviana Restrepo",
-    "fecha_auditoria":"9/03/2023",
+    "fecha_auditoria":"10/03/2023",
     "resultado_auditoria":{
         "opinion_limpia":"prueba",
         "opinion_salvedades": "prueba2",
